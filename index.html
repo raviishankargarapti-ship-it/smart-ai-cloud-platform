@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexusAI — Smart AI Cloud Platform</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- PARTICLES -->
+  <div class="particles" id="particles"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="logo">Nexus<span>AI</span></div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features">Platform</a></li>
+        <li><a href="#architecture">Solutions</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Enterprise</a></li>
+      </ul>
+      <div class="nav-cta">
+        <button class="btn-ghost" onclick="openModal('signin')">Sign in</button>
+        <button class="btn-primary" onclick="openModal('signup')">Start free</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="grid-lines"></div>
+    <div class="hero-content">
+      <div class="badge" id="heroBadge">
+        <span class="badge-dot"></span>
+        Next-gen AI Infrastructure — Now in GA
+      </div>
+      <h1 class="hero-title" id="heroTitle">
+        Build Smarter Apps<br>
+        on <span class="accent-cyan">Intelligent</span><br>
+        <span class="accent-purple">Cloud Infrastructure</span>
+      </h1>
+      <p class="hero-sub" id="heroSub">
+        Deploy, scale, and orchestrate AI workloads across a unified cloud fabric.
+        From model training to real-time inference — all in one platform.
+      </p>
+      <div class="hero-actions" id="heroActions">
+        <button class="btn-large btn-accent" onclick="openModal('signup')">Get started free →</button>
+        <button class="btn-large btn-outline" onclick="scrollTo('features')">Explore platform</button>
+      </div>
+
+      <!-- STATS BAR -->
+      <div class="stats-bar" id="statsBar">
+        <div class="stat-item">
+          <div class="stat-num"><span class="counter" data-target="99.99">0</span><span class="unit">%</span></div>
+          <div class="stat-label">Uptime SLA</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span class="counter" data-target="12">0</span><span class="unit">ms</span></div>
+          <div class="stat-label">Avg. Inference Latency</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span class="counter" data-target="250">0</span><span class="unit">+</span></div>
+          <div class="stat-label">AI Models Available</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span class="counter" data-target="40">0</span><span class="unit">+</span></div>
+          <div class="stat-label">Global Regions</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <span>TensorFlow</span><span>•</span>
+      <span>PyTorch</span><span>•</span>
+      <span>Kubernetes</span><span>•</span>
+      <span>NVIDIA H100</span><span>•</span>
+      <span>OpenAI</span><span>•</span>
+      <span>HuggingFace</span><span>•</span>
+      <span>LangChain</span><span>•</span>
+      <span>Ray</span><span>•</span>
+      <span>MLflow</span><span>•</span>
+      <span>Apache Kafka</span><span>•</span>
+      <span>TensorFlow</span><span>•</span>
+      <span>PyTorch</span><span>•</span>
+      <span>Kubernetes</span><span>•</span>
+      <span>NVIDIA H100</span><span>•</span>
+      <span>OpenAI</span><span>•</span>
+      <span>HuggingFace</span><span>•</span>
+      <span>LangChain</span><span>•</span>
+      <span>Ray</span><span>•</span>
+      <span>MLflow</span><span>•</span>
+      <span>Apache Kafka</span><span>•</span>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="section-header center">
+      <div class="section-tag">Core Capabilities</div>
+      <h2 class="section-title">Everything your AI stack needs</h2>
+      <p class="section-sub">One platform to build, train, and ship production AI — without the infrastructure headaches.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card" data-aos>
+        <div class="feature-icon icon-cyan">⚡</div>
+        <h3>GPU-Accelerated Compute</h3>
+        <p>On-demand A100 & H100 GPU clusters. Scale from a single inference call to thousands of concurrent requests with zero config.</p>
+        <a href="#" class="card-link">Learn more →</a>
+      </div>
+      <div class="feature-card" data-aos>
+        <div class="feature-icon icon-purple">🧠</div>
+        <h3>Model Hub & Registry</h3>
+        <p>Access 250+ pretrained models or bring your own. Version control, A/B testing, and one-click deployment built in.</p>
+        <a href="#" class="card-link">Learn more →</a>
+      </div>
+      <div class="feature-card" data-aos>
+        <div class="feature-icon icon-green">🔒</div>
+        <h3>Enterprise Security</h3>
+        <p>SOC2 Type II, HIPAA, and ISO 27001 certified. Private VPC deployments, end-to-end encryption, and RBAC from day one.</p>
+        <a href="#" class="card-link">Learn more →</a>
+      </div>
+      <div class="feature-card" data-aos>
+        <div class="feature-icon icon-cyan">📊</div>
+        <h3>Unified Observability</h3>
+        <p>Real-time dashboards for model performance, cost attribution, and data drift detection across all your deployments.</p>
+        <a href="#" class="card-link">Learn more →</a>
+      </div>
+      <div class="feature-card" data-aos>
+        <div class="feature-icon icon-purple">🔄</div>
+        <h3>AutoML Pipelines</h3>
+        <p>Automated feature engineering, hyperparameter tuning, and continuous retraining triggered by your data and metrics.</p>
+        <a href="#" class="card-link">Learn more →</a>
+      </div>
+      <div class="feature-card" data-aos>
+        <div class="feature-icon icon-green">🌐</div>
+        <h3>Edge Deployment</h3>
+        <p>Push models to 40+ global edge nodes. Sub-15ms latency for real-time AI apps serving users worldwide.</p>
+        <a href="#" class="card-link">Learn more →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE / HOW IT WORKS -->
+  <section class="section" id="architecture">
+    <div class="platform-section">
+      <div class="platform-text" data-aos>
+        <div class="section-tag">How It Works</div>
+        <h2 class="section-title">A unified platform,<br>not a patchwork</h2>
+        <p class="section-sub">From raw data ingestion to serving predictions at scale — every layer is designed to work together seamlessly.</p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num cyan">01</div>
+            <div>
+              <div class="step-title">Ingest & preprocess</div>
+              <div class="step-desc">Connect any data source. Streaming, batch, or event-driven — transform and enrich in flight.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num purple">02</div>
+            <div>
+              <div class="step-title">Train & evaluate</div>
+              <div class="step-desc">Distributed training on managed GPU clusters with automatic experiment tracking and model evaluation.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num green">03</div>
+            <div>
+              <div class="step-title">Deploy & scale</div>
+              <div class="step-desc">One-click deploy to cloud or edge. Auto-scaling, canary releases, and zero-downtime rollbacks.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="platform-diagram-wrap" data-aos>
+        <div class="platform-diagram" id="archDiagram">
+          <div class="diag-label">Platform Architecture</div>
+          <div class="arch-row">
+            <div class="arch-node active pulse">Data Sources</div>
+            <div class="arch-node active pulse" style="animation-delay:.15s">Stream Processor</div>
+            <div class="arch-node active pulse" style="animation-delay:.3s">Feature Store</div>
+          </div>
+          <div class="arch-arrow">↓ AI Fabric ↓</div>
+          <div class="arch-row">
+            <div class="arch-node purple-node">Training Engine</div>
+            <div class="arch-node purple-node">Model Registry</div>
+          </div>
+          <div class="arch-arrow">↓ Serving Layer ↓</div>
+          <div class="arch-row">
+            <div class="arch-node violet-node">REST API</div>
+            <div class="arch-node violet-node">gRPC Endpoint</div>
+            <div class="arch-node violet-node">Edge Nodes</div>
+          </div>
+          <div class="arch-arrow">↓ Monitoring ↓</div>
+          <div class="arch-row">
+            <div class="arch-node green-node full">Observability &amp; Alerting Dashboard</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD PREVIEW -->
+  <section class="section" id="dashboard">
+    <div class="section-header center">
+      <div class="section-tag">Live Dashboard</div>
+      <h2 class="section-title">Full-stack AI observability</h2>
+      <p class="section-sub">Monitor every inference call, GPU utilization, model drift, and cost — in one place.</p>
+    </div>
+    <div class="dashboard-preview">
+      <div class="dash-sidebar">
+        <div class="dash-logo">NexusAI</div>
+        <nav class="dash-nav">
+          <a href="#" class="dash-link active">📊 Overview</a>
+          <a href="#" class="dash-link">🧠 Models</a>
+          <a href="#" class="dash-link">⚡ Compute</a>
+          <a href="#" class="dash-link">🔄 Pipelines</a>
+          <a href="#" class="dash-link">🌐 Deployments</a>
+          <a href="#" class="dash-link">🔒 Security</a>
+          <a href="#" class="dash-link">💰 Billing</a>
+        </nav>
+      </div>
+      <div class="dash-main">
+        <div class="dash-topbar">
+          <span class="dash-page-title">Platform Overview</span>
+          <div class="dash-topbar-right">
+            <span class="dash-status"><span class="status-dot"></span>All systems operational</span>
+            <button class="dash-btn">+ New Deployment</button>
+          </div>
+        </div>
+        <div class="dash-metrics">
+          <div class="metric-card">
+            <div class="metric-label">Requests / sec</div>
+            <div class="metric-value cyan" id="reqCounter">0</div>
+            <div class="metric-change up">↑ 12.4%</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">GPU Utilization</div>
+            <div class="metric-value purple" id="gpuCounter">0%</div>
+            <div class="metric-change up">↑ 3.1%</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Avg. Latency</div>
+            <div class="metric-value green">11ms</div>
+            <div class="metric-change down">↓ 2ms</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Monthly Cost</div>
+            <div class="metric-value amber">$2,418</div>
+            <div class="metric-change up">↑ 5.7%</div>
+          </div>
+        </div>
+        <div class="dash-chart-area">
+          <div class="chart-header">
+            <span>Inference Traffic — Last 24h</span>
+            <div class="chart-tabs">
+              <button class="ctab active" onclick="setChartTab(this,'24h')">24h</button>
+              <button class="ctab" onclick="setChartTab(this,'7d')">7d</button>
+              <button class="ctab" onclick="setChartTab(this,'30d')">30d</button>
+            </div>
+          </div>
+          <canvas id="trafficChart" width="560" height="120"></canvas>
+        </div>
+        <div class="dash-models">
+          <div class="models-header">Active Models</div>
+          <table class="models-table">
+            <thead>
+              <tr><th>Model</th><th>Version</th><th>Status</th><th>RPS</th><th>Latency</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>gpt-nexus-7b</td><td>v2.1.4</td><td><span class="tag green">Live</span></td><td>1,240</td><td>9ms</td></tr>
+              <tr><td>vision-xl</td><td>v1.3.0</td><td><span class="tag green">Live</span></td><td>340</td><td>22ms</td></tr>
+              <tr><td>embed-dense-v3</td><td>v3.0.1</td><td><span class="tag cyan">Canary</span></td><td>88</td><td>4ms</td></tr>
+              <tr><td>audio-whisper-pro</td><td>v1.0.7</td><td><span class="tag amber">Updating</span></td><td>0</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="section-header center">
+      <div class="section-tag">Pricing</div>
+      <h2 class="section-title">Simple, scalable pricing</h2>
+      <p class="section-sub">Start free, scale as you grow. No hidden fees, no vendor lock-in.</p>
+    </div>
+    <div class="pricing-toggle">
+      <span class="toggle-label" id="billingLabel">Monthly</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="billingToggle" onchange="toggleBilling()"/>
+        <span class="toggle-slider"></span>
+      </label>
+      <span class="toggle-label">Annual <span class="save-badge">Save 20%</span></span>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card" data-aos>
+        <div class="plan-name">Starter</div>
+        <div class="plan-price">$<span class="price-val" data-monthly="0" data-annual="0">0</span></div>
+        <div class="plan-period">Free forever</div>
+        <ul class="plan-features">
+          <li>100K inference calls/month</li>
+          <li>5 deployed models</li>
+          <li>Community support</li>
+          <li>Shared GPU compute</li>
+          <li>Basic observability</li>
+        </ul>
+        <button class="plan-btn btn-outline-plan" onclick="openModal('signup')">Get started</button>
+      </div>
+      <div class="pricing-card featured" data-aos>
+        <div class="popular-badge">Most Popular</div>
+        <div class="plan-name">Pro</div>
+        <div class="plan-price">$<span class="price-val" data-monthly="149" data-annual="119">149</span></div>
+        <div class="plan-period">per month</div>
+        <ul class="plan-features">
+          <li>10M inference calls/month</li>
+          <li>Unlimited deployed models</li>
+          <li>Priority support (24/7)</li>
+          <li>Dedicated GPU clusters</li>
+          <li>Advanced observability</li>
+          <li>AutoML pipelines</li>
+        </ul>
+        <button class="plan-btn btn-filled-plan" onclick="openModal('signup')">Start free trial</button>
+      </div>
+      <div class="pricing-card" data-aos>
+        <div class="plan-name">Enterprise</div>
+        <div class="plan-price" style="font-size:2rem;letter-spacing:-1px">Custom</div>
+        <div class="plan-period">tailored to you</div>
+        <ul class="plan-features">
+          <li>Unlimited everything</li>
+          <li>Private VPC deployment</li>
+          <li>Dedicated account team</li>
+          <li>SLA guarantees</li>
+          <li>Custom compliance</li>
+          <li>On-premise options</li>
+        </ul>
+        <button class="plan-btn btn-outline-plan" onclick="scrollTo('contact')">Contact sales</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" id="testimonials">
+    <div class="section-header center">
+      <div class="section-tag">Testimonials</div>
+      <h2 class="section-title">Trusted by AI teams worldwide</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card" data-aos>
+        <div class="stars">★★★★★</div>
+        <p>"NexusAI cut our model deployment time from days to minutes. The GPU auto-scaling alone saved us $40K in the first quarter."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:rgba(0,212,255,0.15);color:#00d4ff">SR</div>
+          <div>
+            <div class="author-name">Sana Raza</div>
+            <div class="author-role">Head of ML, DataVault</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card" data-aos>
+        <div class="stars">★★★★★</div>
+        <p>"The observability dashboard is a game-changer. We caught a data drift issue in production before it affected our users — that's never happened before."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:rgba(124,58,237,0.15);color:#a78bfa">JK</div>
+          <div>
+            <div class="author-name">James Kim</div>
+            <div class="author-role">CTO, Luminary Labs</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card" data-aos>
+        <div class="stars">★★★★★</div>
+        <p>"We run 30 models across 12 regions. NexusAI handles all the complexity — we just ship features. Best infrastructure decision we've made."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:rgba(6,255,165,0.1);color:#06ffa5">PO</div>
+          <div>
+            <div class="author-name">Priya Osei</div>
+            <div class="author-role">VP Engineering, Scaleforge</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section class="section cta-section" id="contact">
+    <div class="cta-inner" data-aos>
+      <div class="section-tag">Get in Touch</div>
+      <h2 class="section-title">Ready to launch your AI platform?</h2>
+      <p class="section-sub">Talk to our team and get a personalized demo of NexusAI for your use case.</p>
+      <form class="contact-form" onsubmit="submitContact(event)">
+        <div class="form-row">
+          <input type="text" placeholder="Full name" required />
+          <input type="email" placeholder="Work email" required />
+        </div>
+        <div class="form-row">
+          <input type="text" placeholder="Company" />
+          <select>
+            <option value="">Team size</option>
+            <option>1–10</option>
+            <option>11–50</option>
+            <option>51–200</option>
+            <option>200+</option>
+          </select>
+        </div>
+        <textarea placeholder="Tell us about your use case..." rows="4"></textarea>
+        <button type="submit" class="btn-large btn-accent" style="width:100%">Send message →</button>
+        <p id="formSuccess" style="display:none;color:#06ffa5;text-align:center;margin-top:1rem;font-size:0.9rem">✓ Message sent! We'll be in touch within 24 hours.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Nexus<span>AI</span></div>
+        <p>The smart AI cloud platform for teams that build the future.</p>
+        <div class="social-links">
+          <a href="#">𝕏</a>
+          <a href="#">in</a>
+          <a href="#">gh</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-title">Product</div>
+          <a href="#">Platform</a><a href="#">Pricing</a><a href="#">Changelog</a><a href="#">Roadmap</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Developers</div>
+          <a href="#">Documentation</a><a href="#">API Reference</a><a href="#">SDKs</a><a href="#">Status</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <a href="#">About</a><a href="#">Blog</a><a href="#">Careers</a><a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 NexusAI, Inc. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal" id="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
